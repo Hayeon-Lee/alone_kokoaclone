@@ -1,4 +1,4 @@
-## <img src="kakaotalk_logo_round.png"> alone_kokoaclone
+## <img src="kakaotalk_logo_round.png" width='100' height='100'> alone_kokoaclone
 
 카카오톡을 클론코딩하여 HTML과 CSS 학습을 진행합니다.
 
