@@ -46,3 +46,35 @@
        font-size: 20px;
    }
    ```
+
+4. 브라우저는 CSS 파일을 위에서부터 아래로 순서대로 읽는다. 따라서 동일한 태그를 꾸미는 CSS가 있을 경우, 제일 마지막에 있는 코드가 실행된다.
+
+5. Blocks(box) and Inlines
+
+   1. Blocks 특징을 갖는 태그들은 옆에 다른 요소가 올 수 없다.
+
+   2. Inlines 특징을 갖는 태그들은 옆에 다른 요소가 올 수 있다.
+
+   3. Block 과 Inline 스타일은 display 속성을 이용하면 바꾸기가 가능하다.
+
+   4. Block은 높이와 너비를 가질 수 있고, Inline은 그럴 수 없다.
+
+   5. Block(box)는 margin, padding, border 특성을 갖는다.
+
+6. Margins
+
+   1. box의 border(경계선)으로부터 바깥에 있는 공간
+
+   2. box에 아무 처리도 하지 않는다면, 브라우저에 의해 자동으로 div박스의 좌측과 위쪽에 빈 공간이 생긴다.
+
+   3. 코드 작성법
+
+      - margin: 20px; //상하좌우 모두 20px씩 생긴다.
+
+      - margin: 10px 20px; // 상하는 10, 좌우는 20px 씩 생긴다.
+
+      - margin: 10px 20px 30px 40px //상 우 하 좌 시계방향
+
+   4. Collapsing Margin
+
+      - 두 요소의 border line이 같다면, margin이 하나로 취급된다. 상하 방향에서만 발생하는 상황이다.
