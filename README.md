@@ -34,3 +34,12 @@
     - id는 유일해야하고, 태그는 id를 갖지 않거나 오직 한 개만 갖는다.
     - body에도 id를 부여할 수 있다.
 <br/>
+
+## CSS
+
+1. CSS의 목적: 스타일링
+<br/>
+
+2. CSS를 HTML에 추가하는 방법
+    1) HTML과 CSS코드를 한 파일에 작성하기: HTML 코드에 <style> </style> 태그를 입력한다. 
+    2) HTML 코드와 CSS 파일을 분리하기: CSS 파일을 만든 뒤 `` <link href="스타일.css 파일 이름" rel="stylesheet" /> ``를 입력한다.
