@@ -61,7 +61,7 @@
 
    5. Block(box)는 margin, padding, border 특성을 갖는다.
 
-   6. Inline은 **margin을 좌우로만 가질 수 있고**, padding과 border 특성을 갖는다.
+   6. Inline은 **margin을 좌우로만 가질 수 있고**, padding과 border 특성을 갖는다. width와 height 속성을 가질 수 없다.
 
 6. Margins
 
@@ -110,3 +110,28 @@
       }
       ```
       - 클래스 이름은 여러 개 가질 수 있다 `<div class="btn tomato">`
+
+10. inline-block
+
+    - div를 양 옆으로 붙일 수 있게 만들어준다.
+
+    - 반응형을 지원하지 않아 모니터 해상도에 따라 화면 구성이 달라보인다. -> 비추천
+
+    - 위와 같은 이유로 flexbox를 사용한다.
+
+11. Flexbox
+
+    - 자식 요소에는 아무것도 적지 않고, 부모 요소에만 적어야 한다
+
+    - main axis / cross axis: flexbox의 주축은 main(justify-content), 교차축은 cross axis(align-items)이다
+
+    - 위의 요소를 쓰고 싶다면, 부모 요소에 반드시 display: flex를 적어야 한다.
+
+    - 주축을 바꾸고 싶다면 flex-direction요소를 사용하면 된다.
+
+    ```
+    flex-direction: row //가로가 주축
+    flex-direction: column //세로가 주축
+    ```
+
+    - wrap은 화면이 줄어들어서 flexbox의 요소가 겹쳐지는 현상 등을 말하는데, flex-wrap 요소로 제어할 수 있다.
