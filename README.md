@@ -61,6 +61,8 @@
 
    5. Block(box)는 margin, padding, border 특성을 갖는다.
 
+   6. Inline은 **margin을 좌우로만 가질 수 있고**, padding과 border 특성을 갖는다.
+
 6. Margins
 
    1. box의 border(경계선)으로부터 바깥에 있는 공간
@@ -78,3 +80,33 @@
    4. Collapsing Margin
 
       - 두 요소의 border line이 같다면, margin이 하나로 취급된다. 상하 방향에서만 발생하는 상황이다.
+
+7. Padding: border 안쪽의 공간
+
+8. Border: 아웃라인 (box와 inline 모두 Border를 갖는다)
+
+9. CSS의 Selector 작성 법칙
+
+   1. 일반 Tag 이름: 태그 이름 그대로
+
+   2. Tag의 아이디: #id이름
+
+   3. 전체를 가리킬 때: \*
+
+   4. 여러 개의 아이디를 한꺼번에
+
+      ```
+      #tomato,
+      #tomato1,
+      #tomato2{
+         background-color: yellow;
+      }
+      ```
+
+   5. 4번 방법보다는 클래스 사용하기: .클래스이름
+      ```
+      .tomato{
+         background-color: yellow;
+      }
+      ```
+      - 클래스 이름은 여러 개 가질 수 있다 `<div class="btn tomato">`
