@@ -103,13 +103,23 @@
       }
       ```
 
-   5. 4번 방법보다는 클래스 사용하기: .클래스이름
+   5. 비슷한 것들을 묶어 클래스로 만들기 가능: .클래스이름
       ```
       .tomato{
          background-color: yellow;
       }
       ```
       - 클래스 이름은 여러 개 가질 수 있다 `<div class="btn tomato">`
+
+   6. div:first-child //: 앞의 태그와 뒤의 자식 번지수는 바꾸기 가능
+
+      div 내에서 첫번째 자식을 선택해 스타일링 가능
+
+   7. span:nth-child(2) // 괄호 안에 들어가는 것이 순서가 됨
+
+      * span들 중 2번째 span을 선택해 스타일링 가능, odd와 even도 가능하다
+
+      * 2n+1 과 같이 일반식으로도 작성 가능하다
 
 10. inline-block
 
