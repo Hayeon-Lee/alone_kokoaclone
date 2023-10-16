@@ -129,7 +129,15 @@
 
       * div > span {} : div 안에서 가장 첫번째로 나오는 자식 (바로 밑 자식)에 스타일링
 
-      * p + span {} : p 다음에 있는, 같은 레벨에 존재하는 span에 스타일링
+      * p + span {} : p 바로 다음에 있는, 같은 레벨에 존재하는 span에 스타일링
+
+      * p ~ span {} : 형제관계, 꼭 바로 다음에 오지 않아도 됨. p 다음에 오는 어느위치든 상관없는 span에 스타일링
+
+   9. attribute 선택하기-> tagname:attribute
+
+      * input:required{} -> input form에서 required인 것
+
+      * input:[placeholder~="name"] -> input form에서 placeholder에 name이 포함된 것
 
 10. inline-block
 
