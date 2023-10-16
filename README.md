@@ -135,3 +135,11 @@
     ```
 
     - wrap은 화면이 줄어들어서 flexbox의 요소가 겹쳐지는 현상 등을 말하는데, flex-wrap 요소로 제어할 수 있다.
+
+12. position
+
+   - fixed: 를 설정하면 어느 자리에 있든 고정된다. top, bottom, left, right 요소를 수정하면 다른 요소를 무시하고 제일 위에 올라온다.
+
+   - relative: 를 설정하면 기준값이 엘리멘트가 처음 위치한 곳이 되고 top, bottom, left, right 요소를 수정할 수 있다.
+
+   - absolute: 를 설정하면 부모 박스로부터 벗어나 (탈출됨) top/bottom/left/right를 설정할 시 가장 가까이에 있는 relative 부모를 기준으로 맨오른쪽, 왼쪽, 위, 아래로 이동하게 됨. 이런 효과를 막고싶으면 바로 위 부모 요소를 relative로 만든다. 
