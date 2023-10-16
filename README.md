@@ -121,6 +121,16 @@
 
       * 2n+1 과 같이 일반식으로도 작성 가능하다
 
+   8. Combinators
+
+      * p span {} : p안에서 span을 찾아 스타일링
+
+      * div p span {} : div 안에서 p를 찾고, p안의 span을 찾아 스타일링
+
+      * div > span {} : div 안에서 가장 첫번째로 나오는 자식 (바로 밑 자식)에 스타일링
+
+      * p + span {} : p 다음에 있는, 같은 레벨에 존재하는 span에 스타일링
+
 10. inline-block
 
     - div를 양 옆으로 붙일 수 있게 만들어준다.
