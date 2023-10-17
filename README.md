@@ -40,10 +40,10 @@
    1. style을 넣고자 하는 HTML 태그의 이름을 작성한다.
    2. 중괄호에 원하는 스타일 내용을 넣는다.
 
-   ```
+   ```css
    h1 {
-       color: red;
-       font-size: 20px;
+     color: red;
+     font-size: 20px;
    }
    ```
 
@@ -95,18 +95,18 @@
 
    4. 여러 개의 아이디를 한꺼번에
 
-      ```
+      ```css
       #tomato,
       #tomato1,
-      #tomato2{
-         background-color: yellow;
+      #tomato2 {
+        background-color: yellow;
       }
       ```
 
    5. 4번 방법보다는 클래스 사용하기: .클래스이름
-      ```
-      .tomato{
-         background-color: yellow;
+      ```css
+      .tomato {
+        background-color: yellow;
       }
       ```
       - 클래스 이름은 여러 개 가질 수 있다 `<div class="btn tomato">`
@@ -129,9 +129,52 @@
 
     - 주축을 바꾸고 싶다면 flex-direction요소를 사용하면 된다.
 
-    ```
+    ```css
     flex-direction: row //가로가 주축
     flex-direction: column //세로가 주축
     ```
 
     - wrap은 화면이 줄어들어서 flexbox의 요소가 겹쳐지는 현상 등을 말하는데, flex-wrap 요소로 제어할 수 있다.
+
+12. States
+
+    - 버튼을 눌렀을 때 색을 지정하는 것 등도 가능하다
+
+    ```css
+     {
+      /*마우스 클릭할 때*/
+    }
+    button:active {
+      background-color: tomato;
+    }
+     {
+      /*마우스를 올려둘 때*/
+    }
+    button:hover {
+      background-color: tomato;
+    }
+    ```
+
+    - 사이트에 방문한 기록이 있을 때 색이 변하는 것도 다른 색으로 설정이 가능하다.
+
+    ```css
+    a:visited {
+      color: tomato;
+    }
+    ```
+
+    - focus-within은 자식 요소를 클릭했을 때 부모요소에 변화가 생김. 아래의 코드는 form내부의 요소가 클릭되면 form의 테두리가 tomato색이 됨
+
+    ```css
+    form:focus-within {
+      border-color: tomato;
+    }
+    ```
+
+    - 이 경우 form에 마우스를 올릴 경우 input의 색이 바뀜
+
+    ```css
+    form:hover input {
+      background-color: tomatoe;
+    }
+    ```
