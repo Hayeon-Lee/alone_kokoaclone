@@ -259,10 +259,59 @@
       background-color: tomato;
       text-decoration: none;
       transition: background-color 10s ease-in-out;
+
+      /*transition: all 하면 모든 것에 다 바뀜*/
     }
 
     a:hover {
       color: tomato;
       background-color: wheat;
+    }
+    ```
+
+2.  Transform
+
+    - 변형시키는 것
+
+    - 다른 요소까지 변화시키지는 않는다.
+
+    ```css
+    img{
+       border: 10px solid black;
+       border-radius: 50%
+       transform: rotateY(30deg);
+       transform: scale(2,2); //x, y 쪽으로 확대
+       transform: tranlateX(-1000px) ;//가로축 -1000px 이동
+    }
+    ```
+
+    - state와 같이 쓸 수 있다. hover을 하면 transition과 transform이 동시에 적용한다. transition은 root에, transform은 state에 사용가능하다.
+
+    ```css
+    img {
+      transition: ...;
+    }
+
+    img:hover {
+      transform: rotateY(90deg);
+    }
+    ```
+
+3.  Animations
+
+    - 마우스를 올리거나 별다른 이벤트가 없어도 자동으로 애니메이팅이 일어난다.
+
+    ```css
+    @keyframes flip {
+      from {
+        transform: rotateX(0);
+      }
+      to {
+        transform: rotateX(360deg);
+      }
+    }
+
+    img {
+      animation: flip 5s ease-in-out;
     }
     ```
