@@ -103,13 +103,41 @@
       }
       ```
 
-   5. 4번 방법보다는 클래스 사용하기: .클래스이름
-      ```css
-      .tomato {
-        background-color: yellow;
+   5. 비슷한 것들을 묶어 클래스로 만들기 가능: .클래스이름
+      ```
+      .tomato{
+         background-color: yellow;
       }
       ```
       - 클래스 이름은 여러 개 가질 수 있다 `<div class="btn tomato">`
+
+   6. div:first-child //: 앞의 태그와 뒤의 자식 번지수는 바꾸기 가능
+
+      div 내에서 첫번째 자식을 선택해 스타일링 가능
+
+   7. span:nth-child(2) // 괄호 안에 들어가는 것이 순서가 됨
+
+      * span들 중 2번째 span을 선택해 스타일링 가능, odd와 even도 가능하다
+
+      * 2n+1 과 같이 일반식으로도 작성 가능하다
+
+   8. Combinators
+
+      * p span {} : p안에서 span을 찾아 스타일링
+
+      * div p span {} : div 안에서 p를 찾고, p안의 span을 찾아 스타일링
+
+      * div > span {} : div 안에서 가장 첫번째로 나오는 자식 (바로 밑 자식)에 스타일링
+
+      * p + span {} : p 바로 다음에 있는, 같은 레벨에 존재하는 span에 스타일링
+
+      * p ~ span {} : 형제관계, 꼭 바로 다음에 오지 않아도 됨. p 다음에 오는 어느위치든 상관없는 span에 스타일링
+
+   9. attribute 선택하기-> tagname:attribute
+
+      * input:required{} -> input form에서 required인 것
+
+      * input:[placeholder~="name"] -> input form에서 placeholder에 name이 포함된 것
 
 10. inline-block
 
@@ -136,6 +164,13 @@
 
     - wrap은 화면이 줄어들어서 flexbox의 요소가 겹쳐지는 현상 등을 말하는데, flex-wrap 요소로 제어할 수 있다.
 
+12. position
+
+   - fixed: 를 설정하면 어느 자리에 있든 고정된다. top, bottom, left, right 요소를 수정하면 다른 요소를 무시하고 제일 위에 올라온다.
+
+   - relative: 를 설정하면 기준값이 엘리멘트가 처음 위치한 곳이 되고 top, bottom, left, right 요소를 수정할 수 있다.
+
+   - absolute: 를 설정하면 부모 박스로부터 벗어나 (탈출됨) top/bottom/left/right를 설정할 시 가장 가까이에 있는 relative 부모를 기준으로 맨오른쪽, 왼쪽, 위, 아래로 이동하게 됨. 이런 효과를 막고싶으면 바로 위 부모 요소를 relative로 만든다. 
 12. States
 
     - 버튼을 눌렀을 때 색을 지정하는 것 등도 가능하다
