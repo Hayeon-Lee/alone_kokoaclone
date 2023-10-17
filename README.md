@@ -216,3 +216,29 @@
       background-color: tomatoe;
     }
     ```
+
+14. color
+
+    - colorcode: "#000000"
+
+    - rgb: rgb(252, 206, 0)
+
+    - rgba: rgba(252, 206, 0, 20) //알파값
+
+    - 색깔 이름으로 적기
+
+15. 변수 (custome property)
+
+    ```html
+    <style>
+      :root {
+        --main-color: #fcce00;
+        --default-border: 1px solid var(--main-color);
+      }
+
+      a {
+        color: var(--main-color);
+        border: var(--default-border);
+      }
+    </style>
+    ```
