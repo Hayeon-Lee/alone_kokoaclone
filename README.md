@@ -242,3 +242,27 @@
       }
     </style>
     ```
+
+## CSS Advanced
+
+1.  Transitions
+
+    - transition은 state가 없는 요소에만 붙이기 가능
+
+    - 마우스 올리면 hover에 정의된대로 바뀌는데, 이때 transition에 적은 속성대로 됨.
+
+    - 따라서! **변화하게 만드는 특징은 state가 있는 부분에, transition은 state가 없는 부분에!!!!** 적어야 한다.
+
+    ```css
+    a {
+      color: wheat;
+      background-color: tomato;
+      text-decoration: none;
+      transition: background-color 10s ease-in-out;
+    }
+
+    a:hover {
+      color: tomato;
+      background-color: wheat;
+    }
+    ```
