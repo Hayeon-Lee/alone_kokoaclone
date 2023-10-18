@@ -40,10 +40,10 @@
    1. style을 넣고자 하는 HTML 태그의 이름을 작성한다.
    2. 중괄호에 원하는 스타일 내용을 넣는다.
 
-   ```
+   ```css
    h1 {
-       color: red;
-       font-size: 20px;
+     color: red;
+     font-size: 20px;
    }
    ```
 
@@ -95,20 +95,22 @@
 
    4. 여러 개의 아이디를 한꺼번에
 
-      ```
+      ```css
       #tomato,
       #tomato1,
-      #tomato2{
-         background-color: yellow;
+      #tomato2 {
+        background-color: yellow;
       }
       ```
 
    5. 비슷한 것들을 묶어 클래스로 만들기 가능: .클래스이름
+
       ```
       .tomato{
          background-color: yellow;
       }
       ```
+
       - 클래스 이름은 여러 개 가질 수 있다 `<div class="btn tomato">`
 
    6. div:first-child //: 앞의 태그와 뒤의 자식 번지수는 바꾸기 가능
@@ -117,27 +119,27 @@
 
    7. span:nth-child(2) // 괄호 안에 들어가는 것이 순서가 됨
 
-      * span들 중 2번째 span을 선택해 스타일링 가능, odd와 even도 가능하다
+      - span들 중 2번째 span을 선택해 스타일링 가능, odd와 even도 가능하다
 
-      * 2n+1 과 같이 일반식으로도 작성 가능하다
+      - 2n+1 과 같이 일반식으로도 작성 가능하다
 
    8. Combinators
 
-      * p span {} : p안에서 span을 찾아 스타일링
+      - p span {} : p안에서 span을 찾아 스타일링
 
-      * div p span {} : div 안에서 p를 찾고, p안의 span을 찾아 스타일링
+      - div p span {} : div 안에서 p를 찾고, p안의 span을 찾아 스타일링
 
-      * div > span {} : div 안에서 가장 첫번째로 나오는 자식 (바로 밑 자식)에 스타일링
+      - div > span {} : div 안에서 가장 첫번째로 나오는 자식 (바로 밑 자식)에 스타일링
 
-      * p + span {} : p 바로 다음에 있는, 같은 레벨에 존재하는 span에 스타일링
+      - p + span {} : p 바로 다음에 있는, 같은 레벨에 존재하는 span에 스타일링
 
-      * p ~ span {} : 형제관계, 꼭 바로 다음에 오지 않아도 됨. p 다음에 오는 어느위치든 상관없는 span에 스타일링
+      - p ~ span {} : 형제관계, 꼭 바로 다음에 오지 않아도 됨. p 다음에 오는 어느위치든 상관없는 span에 스타일링
 
    9. attribute 선택하기-> tagname:attribute
 
-      * input:required{} -> input form에서 required인 것
+      - input:required{} -> input form에서 required인 것
 
-      * input:[placeholder~="name"] -> input form에서 placeholder에 name이 포함된 것
+      - input:[placeholder~="name"] -> input form에서 placeholder에 name이 포함된 것
 
 10. inline-block
 
@@ -157,7 +159,7 @@
 
     - 주축을 바꾸고 싶다면 flex-direction요소를 사용하면 된다.
 
-    ```
+    ```css
     flex-direction: row //가로가 주축
     flex-direction: column //세로가 주축
     ```
@@ -166,8 +168,150 @@
 
 12. position
 
-   - fixed: 를 설정하면 어느 자리에 있든 고정된다. top, bottom, left, right 요소를 수정하면 다른 요소를 무시하고 제일 위에 올라온다.
+    - fixed: 를 설정하면 어느 자리에 있든 고정된다. top, bottom, left, right 요소를 수정하면 다른 요소를 무시하고 제일 위에 올라온다.
 
-   - relative: 를 설정하면 기준값이 엘리멘트가 처음 위치한 곳이 되고 top, bottom, left, right 요소를 수정할 수 있다.
+    - relative: 를 설정하면 기준값이 엘리멘트가 처음 위치한 곳이 되고 top, bottom, left, right 요소를 수정할 수 있다.
 
-   - absolute: 를 설정하면 부모 박스로부터 벗어나 (탈출됨) top/bottom/left/right를 설정할 시 가장 가까이에 있는 relative 부모를 기준으로 맨오른쪽, 왼쪽, 위, 아래로 이동하게 됨. 이런 효과를 막고싶으면 바로 위 부모 요소를 relative로 만든다. 
+    - absolute: 를 설정하면 부모 박스로부터 벗어나 (탈출됨) top/bottom/left/right를 설정할 시 가장 가까이에 있는 relative 부모를 기준으로 맨오른쪽, 왼쪽, 위, 아래로 이동하게 됨. 이런 효과를 막고싶으면 바로 위 부모 요소를 relative로 만든다.
+
+13. States
+
+    - 버튼을 눌렀을 때 색을 지정하는 것 등도 가능하다
+
+    ```css
+     {
+      /*마우스 클릭할 때*/
+    }
+    button:active {
+      background-color: tomato;
+    }
+     {
+      /*마우스를 올려둘 때*/
+    }
+    button:hover {
+      background-color: tomato;
+    }
+    ```
+
+    - 사이트에 방문한 기록이 있을 때 색이 변하는 것도 다른 색으로 설정이 가능하다.
+
+    ```css
+    a:visited {
+      color: tomato;
+    }
+    ```
+
+    - focus-within은 자식 요소를 클릭했을 때 부모요소에 변화가 생김. 아래의 코드는 form내부의 요소가 클릭되면 form의 테두리가 tomato색이 됨
+
+    ```css
+    form:focus-within {
+      border-color: tomato;
+    }
+    ```
+
+    - 이 경우 form에 마우스를 올릴 경우 input의 색이 바뀜
+
+    ```css
+    form:hover input {
+      background-color: tomatoe;
+    }
+    ```
+
+14. color
+
+    - colorcode: "#000000"
+
+    - rgb: rgb(252, 206, 0)
+
+    - rgba: rgba(252, 206, 0, 20) //알파값
+
+    - 색깔 이름으로 적기
+
+15. 변수 (custome property)
+
+    ```html
+    <style>
+      :root {
+        --main-color: #fcce00;
+        --default-border: 1px solid var(--main-color);
+      }
+
+      a {
+        color: var(--main-color);
+        border: var(--default-border);
+      }
+    </style>
+    ```
+
+## CSS Advanced
+
+1.  Transitions
+
+    - transition은 state가 없는 요소에만 붙이기 가능
+
+    - 마우스 올리면 hover에 정의된대로 바뀌는데, 이때 transition에 적은 속성대로 됨.
+
+    - 따라서! **변화하게 만드는 특징은 state가 있는 부분에, transition은 state가 없는 부분에!!!!** 적어야 한다.
+
+    ```css
+    a {
+      color: wheat;
+      background-color: tomato;
+      text-decoration: none;
+      transition: background-color 10s ease-in-out;
+
+      /*transition: all 하면 모든 것에 다 바뀜*/
+    }
+
+    a:hover {
+      color: tomato;
+      background-color: wheat;
+    }
+    ```
+
+2.  Transform
+
+    - 변형시키는 것
+
+    - 다른 요소까지 변화시키지는 않는다.
+
+    ```css
+    img{
+       border: 10px solid black;
+       border-radius: 50%
+       transform: rotateY(30deg);
+       transform: scale(2,2); //x, y 쪽으로 확대
+       transform: tranlateX(-1000px) ;//가로축 -1000px 이동
+    }
+    ```
+
+    - state와 같이 쓸 수 있다. hover을 하면 transition과 transform이 동시에 적용한다. transition은 root에, transform은 state에 사용가능하다.
+
+    ```css
+    img {
+      transition: ...;
+    }
+
+    img:hover {
+      transform: rotateY(90deg);
+    }
+    ```
+
+3.  Animations
+
+    - 마우스를 올리거나 별다른 이벤트가 없어도 자동으로 애니메이팅이 일어난다.
+
+    ```css
+    @keyframes flip {
+      from {
+        transform: rotateX(0);
+      }
+      to {
+        transform: rotateX(360deg);
+      }
+    }
+
+    img {
+      animation: flip 5s ease-in-out;
+    }
+    ```
